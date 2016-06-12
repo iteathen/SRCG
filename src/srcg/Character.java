@@ -7,23 +7,23 @@ package srcg;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
- *
+ * Assets do not belong here. All assets are linked to an Identity including Nuyen.
  * @author heathen
  */
 public class Character {
     private String PlayerName;
-    private String CharacterName;
+    private final List<Identity> Identities = new ArrayList<>();
     private String CharacterStreetName;
     private String CharacterBackground;
     private String CharacterDescription;
-    private List<SerialIdentifierNumber> SerialIdentifierNumbers = new ArrayList<SerialIdentifierNumber>();
-    private List<Attribute> Attributes = new ArrayList<Attribute>();
-    private List<Skill> Skills = new ArrayList<Skill>();
-    private List<Item> Items = new ArrayList<Item>();
-    private List<Power> Powers = new ArrayList<Power>();
-    private List<Spells> Spells = new ArrayList<Spells>();
-    private List<Quality> Qualities = new ArrayList<Quality>();
+    private final List<SIN> SerialIdentifierNumbers = new ArrayList<>();
+    private final List<Attribute> Attributes = new ArrayList<>();
+    private final List<Skill> Skills = new ArrayList<>();
+    private final List<Item> Items = new ArrayList<>();
+    private final List<Power> Powers = new ArrayList<>();
+    private final List<Spells> Spells = new ArrayList<>();
+    private final List<Quality> Qualities = new ArrayList<>();
+    private final List<DicePool> Dicepools = new ArrayList<>();
 }
