@@ -12,6 +12,7 @@ import javafx.fxml.*;
 import javafx.scene.*;
 import javax.script.*;
 import java.io.FileReader;
+import java.net.URL;
 import javax.xml.bind.annotation.*;
 
 
@@ -38,16 +39,20 @@ public class SRCG extends Application {
                         
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
         
-        /* This is an example of how to execute a EMCAScript using nashorn */
+        /* This is an example of how to execute a EMCAScript using nashorn 
         try{
             ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
             //engine.put("stage", primaryStage);
-            engine.eval(new FileReader(getClass().getResource("/srcg/scripts/test.js").getPath())); //java.io.FileNotFoundException: file:\C:\Users\heathen\Documents\NetBeansProjects\SRCG\dist\run2072677223\SRCG.jar!\srcg\scripts\test.js (The filename, directory name, or volume label syntax is incorrect)
+            String ScriptFilePath = getClass().getResource("/srcg/scripts/test.js").getPath();
+            System.out.println(ScriptFilePath); //test
+            FileReader Script = new FileReader(ScriptFilePath); //file not found
+            System.out.println(Script.toString()); //test
+            engine.eval(Script); 
         }catch(Exception e){
             System.out.println("There was a problem loading a script. Error: " );
             e.printStackTrace();
         }
-        
+        */
 
     }
 
