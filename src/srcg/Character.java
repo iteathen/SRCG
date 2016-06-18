@@ -18,7 +18,6 @@ public class Character {
     private String CharacterStreetName;
     private String CharacterBackground;
     private String CharacterDescription;
-    private final List<SIN> SerialIdentifierNumbers = new ArrayList<>();
     private final List<Attribute> Attributes = new ArrayList<>();
     private final List<Skill> Skills = new ArrayList<>();
     private final List<Item> Items = new ArrayList<>();

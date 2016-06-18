@@ -11,10 +11,14 @@ package srcg;
  */
 public class Asset {
     private String Name;
-    private int MarketValue; //The estimated value in Nuyen
-    private int MonthlyCost; //Any mantenance fees or other type of monthly cost go here
-    private int MonthlyROI; //given as a decimal value. Example 0.01 is 1 percent.
-    private boolean isNuyen;
+    private String Desciption;
+    private double MarketValue; //The estimated value
+    private double AdministrativeOverhead; //Any maintenance fees or other type of periodic cost go here
+    private double ROI; //given as a decimal value. Example 0.01 is 1 percent.
+    private double CompoundRate; // the time interval in whichs interest compounds
+    private double CostInterval; // the time interval in which AdministrativeOverhead accumulates
+    private boolean isMoney;
     private boolean isInvestment;
+    private boolean isPhysicalAsset;
     // missing constructors and methods
 }

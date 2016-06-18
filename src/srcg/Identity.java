@@ -15,10 +15,23 @@ import java.util.List;
 public class Identity {
     private final String Name;
     private String Description;
+    private boolean Authentic;
+    private boolean Fictitious;
+    private int Rating; // Only needed for fictitious identities. Set to a value equal to or less than 0 if the id is genuine
     private final List<Asset> Assets = new ArrayList<>(); //Investments, houses, life style, money.. it is all assets
-    public Identity(String Name, String Description){
+    public Identity(String Name, String Description, int FakeRating){ //set FakeRating to a value <=0 to indicate an Authentic Identity.
         this.Name=Name;
         this.Description = Description;
+        if(FakeRating<=0){
+            this.Authentic=true;
+            this.Fictitious=false;
+            this.Rating=0;
+        }
+        else{
+            this.Authentic=false;
+            this.Fictitious=true;
+            this.Rating=FakeRating;
+        }
     }
     public void addAsset(Asset newAsset){
         Assets.add(newAsset);
